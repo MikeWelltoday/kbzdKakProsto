@@ -1,0 +1,7 @@
+#root {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 100px;
+    background: rgb(113, 187, 187);
+}
