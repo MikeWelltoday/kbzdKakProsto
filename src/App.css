@@ -1,7 +1,16 @@
-#root {
-    display: flex;
-    justify-content: center;
+.App {
+  width: 100vw;
+  height: 100vh;
 
-    padding-top: 100px;
-    background: rgb(113, 187, 187);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 20px;
+
+  padding-top: 100px;
+  background: rgb(113, 187, 187);
+
+  * {
+    background-color: #d07eac;
+  }
 }

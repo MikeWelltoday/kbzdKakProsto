@@ -1,0 +1,38 @@
+.Container {
+  padding: 10px;
+  width: 300px;
+  height: 200px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Container button {
+  padding: 10px 20px;
+  border: 2px solid #2d37e1;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.Container button:hover {
+  cursor: pointer;
+}
+
+.Container button:active {
+  transform: scale(0.95);
+}
+
+.Container span {
+  transition: 0.5s ease;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #2d37e1;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 90px;
+}

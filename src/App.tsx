@@ -1,32 +1,32 @@
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
+import { Accordion } from "./components/accordion/Accordion";
+import { Rating } from "./components/rating/Rating";
+import { OnOff } from "./components/OnOff/OnOff";
 
-// components
-import Accordion from './components/Accordion'
-import Rating from './components/Rating'
+//=================================================================================================================================================
+
+type PageTitleType = {
+  title: string;
+};
+
+//=================================================================================================================================================
 
 // function
 function App() {
-	console.log('rendering => App')
-	return (
-		<div className='App'>
-			<PageTitle title='This is AppComponent' />
-			Article 1
-			<Rating value={1} />
-			<Accordion title='#Menu' collapsed={true} />
-			Article 2
-			<Rating value={1} />
-			<Accordion title='#Users' collapsed={true} />
-		</div>
-	)
+  return (
+    <div className="App">
+      <PageTitle title="This is AppComponent" />
+      <Rating value={2} />
+      <Accordion title="#Menu" collapsed={false} />
+      <Accordion title="#Users" collapsed={false} />
+      <OnOff />
+    </div>
+  );
 }
 
-export default App
-
-type PageTitleType = {
-	title: string
-}
+export default App;
 
 function PageTitle(props: PageTitleType) {
-	return <h1>{props.title}</h1>
+  return <h1>{props.title}</h1>;
 }
