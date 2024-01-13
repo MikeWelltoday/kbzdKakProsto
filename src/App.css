@@ -5,9 +5,10 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: flex-start;
   row-gap: 20px;
 
-  padding-top: 100px;
+  padding-top: 20px;
   background: rgb(113, 187, 187);
 
   * {

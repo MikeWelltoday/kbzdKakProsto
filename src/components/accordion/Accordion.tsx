@@ -1,37 +1,35 @@
-import React from "react";
+import React, { JSX, useState } from "react";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 //=================================================================================================================================================
 
-type AccordionPropsType = {
-  title: string;
-  collapsed: boolean;
-};
-
-type AccordionTitlePropsType = {
-  title: string;
-};
-
 //=================================================================================================================================================
 
-export const Accordion = (props: AccordionPropsType) => {
+export const Accordion = () => {
+  const [collapsed, setCollapsed] = useState(true);
+
+  function onClickHandler() {
+    collapsed ? setCollapsed(false) : setCollapsed(true);
+  }
+
+  const accordionBody: JSX.Element = (
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Projects</li>
+    </ul>
+  );
+
+  const titleStyles = {
+    cursor: "pointer",
+  };
+
   return (
     <div>
-      <AccordionTitle title={props.title} />
-      {props.collapsed ? <AccordionBody /> : <h1>nothing to show</h1>}
+      <h2 onClick={onClickHandler} style={titleStyles}>
+        Menu
+      </h2>
+      {collapsed ? accordionBody : <h3>nothing to show</h3>}
     </div>
   );
 };
-
-function AccordionTitle(props: AccordionTitlePropsType) {
-  return <h2>{props.title}</h2>;
-}
-
-function AccordionBody() {
-  return (
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-  );
-}

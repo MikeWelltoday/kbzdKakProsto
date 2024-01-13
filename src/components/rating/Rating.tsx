@@ -1,35 +1,42 @@
-import React from "react";
+import React, { FC, useState } from "react";
 
 //=================================================================================================================================================
 
-type RatingPropsType = {
-  value: 1 | 2 | 3 | 4 | 5;
-};
-
-type StarPropsType = {
-  selected: boolean;
-};
-
 //=================================================================================================================================================
 
-export const Rating = (props: RatingPropsType) => {
+export const Rating: FC = () => {
+  const [star, setStar] = useState<number>(0);
+
+  const liStyles = {
+    listStyleType: "none",
+    display: "inline-block",
+    padding: "0 10px",
+    cursor: "pointer",
+  };
+
   return (
-    <div>
-      <Star selected={props.value >= 1} />
-      <Star selected={props.value >= 2} />
-      <Star selected={props.value >= 3} />
-      <Star selected={props.value >= 4} />
-      <Star selected={props.value >= 5} />
-    </div>
+    <ul>
+      {[1, 2, 3, 4, 5].map((item) => {
+        function onClickHandler() {
+          setStar(item);
+        }
+
+        return (
+          <li onClick={onClickHandler} key={item} style={liStyles}>
+            <Star selected={star >= item} />
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 
-function Star(props: StarPropsType) {
-  return props.selected ? (
+const Star: FC<{ selected: boolean }> = ({ selected }) => {
+  return selected ? (
     <span>
       <b>Star </b>
     </span>
   ) : (
     <span>Star </span>
   );
-}
+};
