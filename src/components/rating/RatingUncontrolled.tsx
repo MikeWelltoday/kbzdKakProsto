@@ -1,11 +1,12 @@
 import React, { FC, useState } from "react";
+import { ratingValueType } from "../../App";
 
 //=================================================================================================================================================
 
 //=================================================================================================================================================
 
-export const Rating: FC = () => {
-  const [star, setStar] = useState<number>(0);
+export const RatingUncontrolled: FC = () => {
+  const [value, setValue] = useState<ratingValueType>(0);
 
   const liStyles = {
     listStyleType: "none",
@@ -17,26 +18,20 @@ export const Rating: FC = () => {
   return (
     <ul>
       {[1, 2, 3, 4, 5].map((item) => {
+        const ratingItem = item as ratingValueType;
+
         function onClickHandler() {
-          setStar(item);
+          setValue(ratingItem);
         }
 
         return (
-          <li onClick={onClickHandler} key={item} style={liStyles}>
-            <Star selected={star >= item} />
+          <li key={item} style={liStyles}>
+            <span onClick={onClickHandler}>
+              {value >= item ? <b>Star </b> : "Star"}
+            </span>
           </li>
         );
       })}
     </ul>
-  );
-};
-
-const Star: FC<{ selected: boolean }> = ({ selected }) => {
-  return selected ? (
-    <span>
-      <b>Star </b>
-    </span>
-  ) : (
-    <span>Star </span>
   );
 };
