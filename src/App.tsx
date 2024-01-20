@@ -14,17 +14,17 @@ export type ratingValueType = 0 | 1 | 2 | 3 | 4 | 5;
 //=================================================================================================================================================
 
 function App() {
-  const [onOff, setOnOff] = useState<boolean>(false);
-  const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(true);
+  const [onOff, setOnOff] = useState<boolean>(true);
+  const [collapsed, setCollapsed] = useState<boolean>(true);
   const [ratingValue, setRatingValue] = useState<ratingValueType>(0);
 
   return (
     <div className="App">
       <OnOffDimychControlled onClick={setOnOff} onOff={onOff} />
-      <OnOffDimychUncontrolled />
+      <OnOffDimychUncontrolled /> {}
       <AccordionControlled
-        onClick={setAccordionCollapsed}
-        collapsed={accordionCollapsed}
+        onClick={() => setCollapsed(!collapsed)}
+        onChange={collapsed}
       />
       <AccordionUncontrolled />
       <RatingControlled onClick={setRatingValue} value={ratingValue} />

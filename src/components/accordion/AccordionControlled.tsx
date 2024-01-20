@@ -1,10 +1,10 @@
-import React, { FC, JSX, useState } from "react";
+import React, { FC, JSX } from "react";
 
 //===========================================================================================
 
 type accordionControlledPropsType = {
-  onClick: (accordionControlledCollapsed: boolean) => void;
-  collapsed: boolean;
+  onClick: () => void;
+  onChange: boolean;
 };
 
 //===========================================================================================
@@ -12,10 +12,6 @@ type accordionControlledPropsType = {
 export const AccordionControlled: FC<accordionControlledPropsType> = (
   props,
 ) => {
-  function onClickHandler() {
-    props.collapsed ? props.onClick(false) : props.onClick(true);
-  }
-
   const accordionBody: JSX.Element = (
     <ul>
       <li>Home</li>
@@ -30,10 +26,10 @@ export const AccordionControlled: FC<accordionControlledPropsType> = (
 
   return (
     <div>
-      <h2 onClick={onClickHandler} style={titleStyles}>
+      <h2 onClick={props.onClick} style={titleStyles}>
         Menu Controlled
       </h2>
-      {props.collapsed ? accordionBody : <h3>nothing to show</h3>}
+      {props.onChange ? accordionBody : <h3>nothing to show</h3>}
     </div>
   );
 };
