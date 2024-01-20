@@ -4,7 +4,7 @@ import React, { FC, useState } from "react";
 
 //=================================================================================================================================================
 
-export const OnnOffDimich: FC = () => {
+export const OnOffDimychUncontrolled: FC = () => {
   const [on, setOn] = useState<boolean>(false);
 
   function onClickHandlerOn() {

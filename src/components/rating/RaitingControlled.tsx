@@ -5,7 +5,7 @@ import { ratingValueType } from "../../App";
 
 type ratingControlledPropsType = {
   value: ratingValueType;
-  onClick: (value: ratingValueType) => void;
+  onClick: (ratingControlledValue: ratingValueType) => void;
 };
 
 //=================================================================================================================================================

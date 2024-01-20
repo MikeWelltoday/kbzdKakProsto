@@ -4,7 +4,7 @@ import React, { JSX, useState } from "react";
 
 //===========================================================================================
 
-export const Accordion = () => {
+export const AccordionUncontrolled = () => {
   const [collapsed, setCollapsed] = useState(true);
 
   function onClickHandler() {
@@ -26,7 +26,7 @@ export const Accordion = () => {
   return (
     <div>
       <h2 onClick={onClickHandler} style={titleStyles}>
-        Menu
+        Menu Uncontrolled
       </h2>
       {collapsed ? accordionBody : <h3>nothing to show</h3>}
     </div>
