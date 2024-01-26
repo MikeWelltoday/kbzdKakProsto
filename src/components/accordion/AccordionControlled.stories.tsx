@@ -1,16 +1,12 @@
-import type { Meta } from "@storybook/react";
 import React, { useState } from "react";
 import { AccordionControlled } from "./AccordionControlled";
-import { action } from "@storybook/addon-actions";
 
 export default {
+  title: "AccordionControlled",
   component: AccordionControlled,
 };
 
-//создаем
-const onChangeHandler = action("onChange");
-
-export const StateAccordionControlled = () => {
+export const BaseState = () => {
   const [collapsed, setCollapsed] = useState<boolean>(true);
   return (
     <AccordionControlled
