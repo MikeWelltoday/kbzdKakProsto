@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <OnOffDimychControlled onClick={setOnOff} onOff={onOff} />
-      <OnOffDimychUncontrolled /> {}
+      <OnOffDimychUncontrolled />
       <AccordionControlled
         onClick={() => setCollapsed(!collapsed)}
         onChange={collapsed}
