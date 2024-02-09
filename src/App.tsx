@@ -6,6 +6,7 @@ import { RatingUncontrolled } from "./components/rating/RatingUncontrolled";
 import { RatingControlled } from "./components/rating/RaitingControlled";
 import { OnOffDimychUncontrolled } from "./components/OnOffDimych/OnOffDimychUncontrolled";
 import { OnOffDimychControlled } from "./components/OnOffDimych/OnOffDimychControlled";
+import { Select } from "./components/select/Select";
 
 //=================================================================================================================================================
 
@@ -20,15 +21,16 @@ function App() {
 
   return (
     <div className="App">
-      <OnOffDimychControlled onClick={setOnOff} onOff={onOff} />
-      <OnOffDimychUncontrolled />
-      <AccordionControlled
-        onClick={() => setCollapsed(!collapsed)}
-        onChange={collapsed}
-      />
-      <AccordionUncontrolled />
-      <RatingControlled onClick={setRatingValue} value={ratingValue} />
-      <RatingUncontrolled />
+      {/*<OnOffDimychControlled onClick={setOnOff} onOff={onOff} />*/}
+      {/*<OnOffDimychUncontrolled />*/}
+      {/*<AccordionControlled*/}
+      {/*  onClick={() => setCollapsed(!collapsed)}*/}
+      {/*  onChange={collapsed}*/}
+      {/*/>*/}
+      {/*<AccordionUncontrolled />*/}
+      {/*<RatingControlled onClick={setRatingValue} value={ratingValue} />*/}
+      {/*<RatingUncontrolled />*/}
+      <Select />
     </div>
   );
 }
