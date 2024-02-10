@@ -1,66 +1,27 @@
+
 .select {
-  background-color: #d7d7ae;
-  padding: 15px;
-  border: 2px solid #063ef3;
-  border-radius: 15px;
-
-  width: 200px;
-
-  display: flex;
-  flex-flow: column nowrap;
 }
 
-.selectBody {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  p {
-    flex-grow: 1;
-    text-align: center;
-    color: aqua;
-    font-size: 24px;
-    font-weight: 600;
-  }
-}
-
-.button {
-  font-size: 30px;
-  outline: none;
-  border: none;
-  color: #d70abb;
-  font-weight: 900;
+.main {
   cursor: pointer;
-
-  background-color: greenyellow;
-
-  &:active {
-    transform: scale(1.05);
-    color: orange;
-  }
+  border: 1px solid black;
+  display: inline-block;
+  min-height: 20px;
+  min-width: 40px;
 }
 
-.listBody {
-  padding-right: 30px;
-  display: flex;
-  flex-flow: column nowrap;
+.items {
+  position: absolute;
+  border: 1px solid black;
+  list-style-type: none;
+  padding: 5px;
 
-  button {
-    border: none;
-
-    margin-bottom: 15px;
+  li {
     cursor: pointer;
 
-    color: aqua;
-    font-size: 24px;
-    font-weight: 600;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &:hover {
-      color: yellow;
+    &.selected {
+      background-color: blue;
+      color: white;
     }
   }
 }
