@@ -35,6 +35,7 @@ export const Select: FC<SelectPropsType> = (props) => {
 
     function onKeyDown(e: KeyboardEvent<HTMLDivElement>) {
 
+        // логика движения по списку стрелочками
         if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
             for (let i = 0; i < props.items.length; i++) {
                 if (props.items[i].value === hoveredElementValue) {

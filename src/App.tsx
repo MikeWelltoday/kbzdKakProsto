@@ -20,15 +20,15 @@ function App() {
 
     return (
         <div className="App">
-            <OnOffDimychControlled onClick={setOnOff} onOff={onOff}/>
-            <OnOffDimychUncontrolled/>
-            <AccordionControlled
-                onClick={() => setCollapsed(!collapsed)}
-                onChange={collapsed}
-            />
+            {/*<OnOffDimychControlled onClick={setOnOff} onOff={onOff}/>*/}
+            {/*<OnOffDimychUncontrolled/>*/}
+            {/*<AccordionControlled*/}
+            {/*    onClick={() => setCollapsed(!collapsed)}*/}
+            {/*    onChange={collapsed}*/}
+            {/*/>*/}
             <AccordionUncontrolled/>
-            <RatingControlled onClick={setRatingValue} value={ratingValue}/>
-            <RatingUncontrolled/>
+            {/*<RatingControlled onClick={setRatingValue} value={ratingValue}/>*/}
+            {/*<RatingUncontrolled/>*/}
         </div>
     )
 }
