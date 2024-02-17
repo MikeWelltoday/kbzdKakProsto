@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import './App.css'
 import {AccordionUncontrolled} from './components/accordion/AccordionUncontrolled'
-import {AccordionControlled} from './components/accordion/AccordionControlled'
-import {RatingUncontrolled} from './components/rating/RatingUncontrolled'
-import {RatingControlled} from './components/rating/RaitingControlled'
-import {OnOffDimychUncontrolled} from './components/OnOffDimych/OnOffDimychUncontrolled'
 import {OnOffDimychControlled} from './components/OnOffDimych/OnOffDimychControlled'
+import {OnOffDimychUncontrolled} from './components/OnOffDimych/OnOffDimychUncontrolled'
+import {AccordionControlled} from './components/accordion/AccordionControlled'
+import {RatingControlled} from './components/rating/RaitingControlled'
+import {RatingUncontrolled} from './components/rating/RatingUncontrolled'
 
 //=================================================================================================================================================
 
@@ -20,17 +20,20 @@ function App() {
 
     return (
         <div className="App">
-            {/*<OnOffDimychControlled onClick={setOnOff} onOff={onOff}/>*/}
-            {/*<OnOffDimychUncontrolled/>*/}
-            {/*<AccordionControlled*/}
-            {/*    onClick={() => setCollapsed(!collapsed)}*/}
-            {/*    onChange={collapsed}*/}
-            {/*/>*/}
+            <OnOffDimychControlled onClick={setOnOff} onOff={onOff}/>
+            <OnOffDimychUncontrolled/>
+            <AccordionControlled
+                onClick={() => setCollapsed(!collapsed)}
+                onChange={collapsed}
+            />
             <AccordionUncontrolled/>
-            {/*<RatingControlled onClick={setRatingValue} value={ratingValue}/>*/}
-            {/*<RatingUncontrolled/>*/}
+            <RatingControlled onClick={setRatingValue} value={ratingValue}/>
+            <RatingUncontrolled/>
         </div>
     )
 }
 
 export default App
+
+
+
