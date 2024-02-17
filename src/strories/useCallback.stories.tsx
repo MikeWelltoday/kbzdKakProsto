@@ -1,4 +1,4 @@
-import React, {useState, memo, FC} from 'react'
+import React, {memo, useCallback, useMemo, useState} from 'react'
 
 export default {
     title: 'useCallback demo'
@@ -6,19 +6,28 @@ export default {
 
 
 export const LikeUseCallback = () => {
-
+    console.log('LikeUseCallback')
     const [counter, setCounter] = useState(0)
-    const [users, setUsers] = useState(['Dimych', 'Valera', 'Artem'])
+    const [books, setBooks] = useState(['React', 'Js', 'CSS', 'HTML'])
 
-    function addUser() {
-        setUsers(['NEW_USER', ...users])
-    }
+    const AddBook = useCallback(() => setBooks([...books, 'Angular ' + new Date().getDate()]), [books])
 
     return (
         <>
             <button onClick={() => setCounter(counter + 1)}>+</button>
-            <button onClick={addUser}>addUser</button>
-
+            {counter}
+            <Books addBook={AddBook}/>
         </>
     )
 }
+
+const Books = memo((props: { addBook: () => void }) => {
+    console.log('BooksSecret')
+    return <button onClick={props.addBook}>add Book</button>
+})
+
+
+
+
+
+
