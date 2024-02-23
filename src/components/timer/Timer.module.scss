@@ -1,0 +1,34 @@
+.timer {
+  padding: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+}
+
+.input {
+  background-color: mediumpurple;
+  text-align: center;
+  padding: 5px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-evenly;
+
+  button {
+    background-color: yellow;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.shower {
+  background-color: mediumpurple;
+  text-align: center;
+  padding: 5px;
+}

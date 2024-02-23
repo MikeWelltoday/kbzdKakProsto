@@ -6,6 +6,7 @@ import {OnOffDimychUncontrolled} from './components/OnOffDimych/OnOffDimychUncon
 import {AccordionControlled} from './components/accordion/AccordionControlled'
 import {RatingControlled} from './components/rating/RaitingControlled'
 import {RatingUncontrolled} from './components/rating/RatingUncontrolled'
+import {Timer} from './components/timer/Timer'
 
 //=================================================================================================================================================
 
@@ -20,15 +21,16 @@ function App() {
 
     return (
         <div className="App">
-            <OnOffDimychControlled onClick={setOnOff} onOff={onOff}/>
-            <OnOffDimychUncontrolled/>
-            <AccordionControlled
-                onClick={() => setCollapsed(!collapsed)}
-                onChange={collapsed}
-            />
-            <AccordionUncontrolled/>
-            <RatingControlled onClick={setRatingValue} value={ratingValue}/>
-            <RatingUncontrolled/>
+            <Timer/>
+            {/*<OnOffDimychControlled onClick={setOnOff} onOff={onOff}/>*/}
+            {/*<OnOffDimychUncontrolled/>*/}
+            {/*<AccordionControlled*/}
+            {/*    onClick={() => setCollapsed(!collapsed)}*/}
+            {/*    onChange={collapsed}*/}
+            {/*/>*/}
+            {/*<AccordionUncontrolled/>*/}
+            {/*<RatingControlled onClick={setRatingValue} value={ratingValue}/>*/}
+            {/*<RatingUncontrolled/>*/}
         </div>
     )
 }
