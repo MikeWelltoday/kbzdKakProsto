@@ -1,0 +1,44 @@
+.clock {
+  background: rgb(113, 187, 187);
+}
+
+.digital {
+
+}
+
+.analog {
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: relative;
+
+  span {
+    display: block;
+    width: 250px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 50%;
+  }
+
+  .hoursArrow {
+    height: 10px;
+    background-color: mediumpurple;
+    border-radius: 10px;
+  }
+
+  .minutesArrow {
+    height: 6px;
+    background-color: #4de794;
+    border-radius: 10px;
+  }
+
+  .secondsArrow {
+    height: 2px;
+    background-color: #e0085b;
+    border-radius: 10px;
+  }
+
+}

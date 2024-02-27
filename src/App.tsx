@@ -7,6 +7,7 @@ import {AccordionControlled} from './components/accordion/AccordionControlled'
 import {RatingControlled} from './components/rating/RaitingControlled'
 import {RatingUncontrolled} from './components/rating/RatingUncontrolled'
 import {Timer} from './components/timer/Timer'
+import {Clock} from './components/clock/Clock'
 
 //=================================================================================================================================================
 
@@ -21,7 +22,8 @@ function App() {
 
     return (
         <div className="App">
-            <Timer/>
+            <Clock format={false}/>
+            {/*<Timer/>*/}
             {/*<OnOffDimychControlled onClick={setOnOff} onOff={onOff}/>*/}
             {/*<OnOffDimychUncontrolled/>*/}
             {/*<AccordionControlled*/}
