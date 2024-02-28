@@ -70,7 +70,7 @@ export const Clock: FC<ClockPropsType> = (props) => {
                 <div className={s.analog}>
                     <span
                         className={s.hoursArrow}
-                        style={{transform: `translateY(-50%) rotate(${-90 + date.getHours() * 15}deg)`}}
+                        style={{transform: `translateY(-50%) rotate(${-90 + date.getHours() * 30}deg)`}}
                     ></span>
                     <span
                         className={s.minutesArrow}
